@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIPath.HelloActivity", "UIPath.HelloActivity", "{348379CF-9646-44FB-B76F-5C8EA0D1D38B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity", "UIPath.HelloActivity\UIPath.HelloActivity\UIPath.HelloActivity.csproj", "{0FBA4A8A-4744-4A1B-9679-B09EF329E419}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities", "UIPath.HelloActivity\UIPath.HelloActivity.Activities\UIPath.HelloActivity.Activities.csproj", "{340FCE66-C510-46A6-9999-213687131A29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities.Design", "UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\UIPath.HelloActivity.Activities.Design.csproj", "{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8B5B812F-E2B8-451B-B6D1-0B96BFDB319F}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", "Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.shproj", "{4546856D-EA50-45C6-9419-EEEACB5A80AA}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{1b9bfc34-6b60-45d4-bf38-0d220a176fe2}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{340fce66-c510-46a6-9999-213687131a29}*SharedItemsImports = 5
+		Shared\UiPath.Shared.Activities\UiPath.Shared.Activities.projitems*{4546856d-ea50-45c6-9419-eeeacb5a80aa}*SharedItemsImports = 13
+		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{df9c43f0-add3-4fbf-995e-84b92f9cbf25}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340FCE66-C510-46A6-9999-213687131A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340FCE66-C510-46A6-9999-213687131A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340FCE66-C510-46A6-9999-213687131A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340FCE66-C510-46A6-9999-213687131A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FBA4A8A-4744-4A1B-9679-B09EF329E419} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
+		{340FCE66-C510-46A6-9999-213687131A29} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
+		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
+		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {8B5B812F-E2B8-451B-B6D1-0B96BFDB319F}
+		{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25} = {8B5B812F-E2B8-451B-B6D1-0B96BFDB319F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E48A25AD-382A-459E-B20F-393889F2E1BE}
+	EndGlobalSection
+EndGlobal

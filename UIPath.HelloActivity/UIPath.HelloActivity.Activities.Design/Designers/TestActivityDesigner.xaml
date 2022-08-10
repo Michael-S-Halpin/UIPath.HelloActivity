@@ -1,0 +1,80 @@
+<sap:ActivityDesigner x:Class="UiPath.HelloActivity.Activities.Design.Designers.TestActivityDesigner"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:activity="clr-namespace:UiPath.HelloActivity.Activities.Properties;assembly=UiPath.HelloActivity.Activities"
+                      xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+                      xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+                      xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+                      xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
+                      xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls"
+                      xmlns:activities="clr-namespace:UiPath.HelloActivity.Activities;assembly=UiPath.HelloActivity.Activities">
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+            <sapc:ModelToObjectValueConverter x:Key="ModelItemConverter" />  
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/UiPath.HelloActivity.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+
+    <uip:ActivityDecoratorControl Style="{StaticResource ActivityDecoratorStyle}">
+        <StackPanel>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_FilePath_DisplayName}"/>
+            <uip:FilePathControl IsManipulationEnabled="False"
+                                 Margin="0,0,0,5"
+                                 ModelItem="{Binding Path=ModelItem}" 
+                                 HintText="{x:Static activity:Resources.TestActivity_FilePath_Description}" 
+                                 PropertyName="FilePath" 
+                                 Expression="{Binding ModelItem.FilePath, 
+                                              Converter={StaticResource ArgumentToExpressionConverter}, 
+                                              ConverterParameter=In, 
+                                              Mode=TwoWay, 
+                                              UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_YourName_DisplayName}"/>
+            <uip:ComboboxControl Margin="0,0,0,5"
+                                 PropertyName="{x:Static activity:Resources.TestActivity_YourName_DisplayName}"
+                                 HintText="{x:Static activity:Resources.TestActivity_YourName_Description}"
+                                 ItemsSource="{Binding OptionSelections}"
+                                 SelectionChanged="OptionSelection_SelectionChanged"
+                                 SelectedItem="{Binding ModelItem.YourName, 
+                                                         Converter={StaticResource 
+                                                         ResourceKey=ArgumentToExpressionConverter}, 
+                                                 Mode=TwoWay, 
+                                                 ConverterParameter=In, 
+                                                 UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_RelativePronoun_DisplayName}"/>
+            <ComboBox Margin="0,0,0,5" 
+                      MaxDropDownHeight="150"  
+                      IsEditable="False" 
+                      ToolTip="{x:Static activity:Resources.TestActivity_RelativePronoun_Description}"
+                      ItemsSource="{Binding ComboSelectionEnums}" 
+                      SelectedItem="{Binding ModelItem.RelativePronoun,  
+                                               Mode=TwoWay, 
+                                               UpdateSourceTrigger=PropertyChanged}"/>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_DataType_DisplayName}"/>
+            <sapv:TypePresenter Margin="0,0,0,5" 
+                                PropertyChanged="TypeSelection_PropertyChanged"
+                                Label="{x:Static activity:Resources.TestActivity_DataType_DisplayName}"
+                                ToolTip="{x:Static activity:Resources.TestActivity_DataType_Description}"
+                                Type="{Binding Path=ModelItem.DataType, 
+                                       Mode=TwoWay, 
+                                       Converter={StaticResource 
+                                       ResourceKey=ModelItemConverter}}"/>
+        </StackPanel>
+    </uip:ActivityDecoratorControl>
+</sap:ActivityDesigner>
