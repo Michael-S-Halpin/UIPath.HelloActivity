@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIPath.HelloActivity", "UIPath.HelloActivity", "{348379CF-9646-44FB-B76F-5C8EA0D1D38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity", "UIPath.HelloActivity\UIPath.HelloActivity\UIPath.HelloActivity.csproj", "{0FBA4A8A-4744-4A1B-9679-B09EF329E419}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities", "UIPath.HelloActivity\UIPath.HelloActivity.Activities\UIPath.HelloActivity.Activities.csproj", "{340FCE66-C510-46A6-9999-213687131A29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities.Design", "UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\UIPath.HelloActivity.Activities.Design.csproj", "{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}"
@@ -29,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0FBA4A8A-4744-4A1B-9679-B09EF329E419}.Release|Any CPU.Build.0 = Release|Any CPU
 		{340FCE66-C510-46A6-9999-213687131A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{340FCE66-C510-46A6-9999-213687131A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{340FCE66-C510-46A6-9999-213687131A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,7 +40,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{0FBA4A8A-4744-4A1B-9679-B09EF329E419} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
 		{340FCE66-C510-46A6-9999-213687131A29} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
 		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2} = {348379CF-9646-44FB-B76F-5C8EA0D1D38B}
 		{4546856D-EA50-45C6-9419-EEEACB5A80AA} = {8B5B812F-E2B8-451B-B6D1-0B96BFDB319F}

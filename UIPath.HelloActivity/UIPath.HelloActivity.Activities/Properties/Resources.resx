@@ -119,143 +119,87 @@
   </resheader>
   <data name="ContinueOnError_Description" xml:space="preserve">
     <value>If set, continue executing the remaining activities even if the current activity has failed.</value>
-    <comment>property description</comment>
   </data>
   <data name="ContinueOnError_DisplayName" xml:space="preserve">
     <value>ContinueOnError</value>
-    <comment>property name</comment>
-  </data>
-  <data name="Timeout_Description" xml:space="preserve">
-    <value>Specifies the amount of time (in milliseconds) to wait for the activity to run before an error is thrown. The default value is 60000 (1 minute).</value>
-    <comment>property description</comment>
-  </data>
-  <data name="Timeout_DisplayName" xml:space="preserve">
-    <value>Timeout (milliseconds)</value>
-    <comment>property name</comment>
-  </data>
-  <data name="Timeout_Error" xml:space="preserve">
-    <value>The activity timed out and was canceled.</value>
-    <comment>error message</comment>
   </data>
   <data name="Do" xml:space="preserve">
     <value>Do</value>
-    <comment>generic</comment>
   </data>
   <data name="Common_Category" xml:space="preserve">
     <value>Common</value>
-    <comment>category</comment>
-  </data>
-  <data name="Authentication_Category" xml:space="preserve">
-    <value>Authentication</value>
-    <comment>category</comment>
-  </data>
-  <data name="Options_Category" xml:space="preserve">
-    <value>Options</value>
-    <comment>category</comment>
   </data>
   <data name="ValidationScope_Error" xml:space="preserve">
     <value>Cannot be used outside of a {0}.</value>
-    <comment>error message; {0} is a container activity (e.g. a scope)</comment>
   </data>
   <data name="ValidationValue_Error" xml:space="preserve">
     <value>Please provide a value for {0}.</value>
-    <comment>error message; {0} is the name of a missing property</comment>
-  </data>
-  <data name="ValidationExclusiveProperties_Error" xml:space="preserve">
-    <value>Please provide a value either for {0} or {1}, but not both.</value>
-    <comment>error message; {0} &amp; {1} are mutually exclusive activities</comment>
-  </data>
-  <data name="ValidationOverloadGroup_Error" xml:space="preserve">
-    <value>Please provide values for both {0} and {1}.</value>
-    <comment>error message; {0} &amp; {1} are complementary properties</comment>
   </data>
   <data name="TestActivity_DisplayName" xml:space="preserve">
     <value>Test Activity</value>
-    <comment>activity name</comment>
   </data>
   <data name="TestActivity_Description" xml:space="preserve">
     <value>A simple test activity.</value>
-    <comment>activity description</comment>
   </data>
   <data name="TestActivity_FilePath_DisplayName" xml:space="preserve">
     <value>File Path</value>
-    <comment>property name</comment>
   </data>
   <data name="TestActivity_FilePath_Description" xml:space="preserve">
     <value>Select any file.</value>
-    <comment>property description</comment>
   </data>
   <data name="TestActivity_Message_DisplayName" xml:space="preserve">
     <value>Message</value>
-    <comment>property name</comment>
   </data>
   <data name="TestActivity_Message_Description" xml:space="preserve">
     <value>A personalized message the system returns.</value>
-    <comment>property description</comment>
   </data>
   <data name="TestActivity_RelativePronoun_DisplayName" xml:space="preserve">
     <value>Relative Pronoun</value>
-    <comment>property name</comment>
   </data>
   <data name="TestActivity_RelativePronoun_Description" xml:space="preserve">
     <value>Select any pronoun.</value>
-    <comment>property description</comment>
   </data>
   <data name="TestActivity_DataType_DisplayName" xml:space="preserve">
     <value>Data Type</value>
-    <comment>property name</comment>
   </data>
   <data name="TestActivity_DataType_Description" xml:space="preserve">
     <value>Select any data type.</value>
-    <comment>property description</comment>
   </data>
   <data name="Input_Category" xml:space="preserve">
     <value>Input</value>
-    <comment>category</comment>
   </data>
   <data name="TestScope_DisplayName" xml:space="preserve">
     <value>Test Scope</value>
-    <comment>activity name</comment>
   </data>
   <data name="TestScope_Description" xml:space="preserve">
     <value>A simple scope.</value>
-    <comment>activity description</comment>
   </data>
   <data name="TestScope_TestString_DisplayName" xml:space="preserve">
     <value>Test String</value>
-    <comment>property name</comment>
   </data>
   <data name="TestScope_TestString_Description" xml:space="preserve">
     <value>A simple string.</value>
-    <comment>property description</comment>
   </data>
   <data name="ScopeActivity_Test_DisplayName" xml:space="preserve">
     <value>Test</value>
-    <comment>property name</comment>
   </data>
   <data name="ScopeActivity_Test_Description" xml:space="preserve">
     <value>Represent an object passed in by the outer scope.</value>
-    <comment>property description</comment>
   </data>
   <data name="Output_Category" xml:space="preserve">
     <value>Output</value>
-    <comment>category</comment>
   </data>
   <data name="ScopeActivity_DisplayName" xml:space="preserve">
     <value>A scoped activity.</value>
-    <comment>property name</comment>
   </data>
   <data name="ScopeActivity_Description" xml:space="preserve">
     <value>Scope Activity</value>
-    <comment>property description</comment>
   </data>
   <data name="TestScope_OtherString_DisplayName" xml:space="preserve">
     <value>Other String</value>
-    <comment>property name</comment>
   </data>
   <data name="TestScope_OtherString_Description" xml:space="preserve">
     <value>Another string.</value>
-    <comment>property description</comment>
   </data>
   <data name="TestActivity_YourName_DisplayName" xml:space="preserve">
     <value>Your Name</value>
