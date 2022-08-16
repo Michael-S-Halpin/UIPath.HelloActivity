@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
+using UIPath.HelloActivity.Enums;
 
 namespace UiPath.HelloActivity.Activities;
 
-public enum TestEnum
-{
-    This,
-    That,
-    TheOther
-}
 
 [LocalizedDisplayName(nameof(Resources.TestActivity_DisplayName))]
 [LocalizedDescription(nameof(Resources.TestActivity_Description))]
