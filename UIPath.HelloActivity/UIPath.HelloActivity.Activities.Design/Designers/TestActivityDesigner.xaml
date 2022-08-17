@@ -28,7 +28,8 @@
         <StackPanel>
             <Label Margin="0,0,0, 0"
                    Padding="0,0,0,0"
-                   Content="{x:Static activity:Resources.TestActivity_FilePath_DisplayName}"/>
+                   Content="{x:Static activity:Resources.TestActivity_FilePath_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_FilePath_Description}"/>
             <uip:FilePathControl IsManipulationEnabled="False"
                                  Margin="0,0,0,5"
                                  ModelItem="{Binding Path=ModelItem}" 
@@ -41,7 +42,8 @@
                                               UpdateSourceTrigger=PropertyChanged}"/>
             <Label Margin="0,0,0, 0"
                    Padding="0,0,0,0"
-                   Content="{x:Static activity:Resources.TestActivity_YourName_DisplayName}"/>
+                   Content="{x:Static activity:Resources.TestActivity_YourName_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_YourName_Description}"/>
             <uip:ComboboxControl Margin="0,0,0,5"
                                  PropertyName="{x:Static activity:Resources.TestActivity_YourName_DisplayName}"
                                  HintText="{x:Static activity:Resources.TestActivity_YourName_Description}"
@@ -55,7 +57,8 @@
                                                  UpdateSourceTrigger=PropertyChanged}"/>
             <Label Margin="0,0,0, 0"
                    Padding="0,0,0,0"
-                   Content="{x:Static activity:Resources.TestActivity_RelativePronoun_DisplayName}"/>
+                   Content="{x:Static activity:Resources.TestActivity_RelativePronoun_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_RelativePronoun_Description}"/>
             <ComboBox Margin="0,0,0,5" 
                       MaxDropDownHeight="150"  
                       IsEditable="False" 
@@ -66,7 +69,8 @@
                                                UpdateSourceTrigger=PropertyChanged}"/>
             <Label Margin="0,0,0, 0"
                    Padding="0,0,0,0"
-                   Content="{x:Static activity:Resources.TestActivity_DataType_DisplayName}"/>
+                   Content="{x:Static activity:Resources.TestActivity_DataType_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_DataType_Description}"/>
             <sapv:TypePresenter Margin="0,0,0,5" 
                                 PropertyChanged="TypeSelection_PropertyChanged"
                                 Label="{x:Static activity:Resources.TestActivity_DataType_DisplayName}"
