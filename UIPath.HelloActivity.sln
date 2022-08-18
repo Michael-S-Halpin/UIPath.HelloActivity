@@ -15,6 +15,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities", 
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UiPath.Shared.Activities.Design", "Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.shproj", "{DF9C43F0-ADD3-4FBF-995E-84B92F9CBF25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{12C44E92-CC09-46F8-ABC6-BEFD4BA09AB6}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems*{1b9bfc34-6b60-45d4-bf38-0d220a176fe2}*SharedItemsImports = 5
@@ -35,6 +37,10 @@ Global
 		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12C44E92-CC09-46F8-ABC6-BEFD4BA09AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12C44E92-CC09-46F8-ABC6-BEFD4BA09AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12C44E92-CC09-46F8-ABC6-BEFD4BA09AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12C44E92-CC09-46F8-ABC6-BEFD4BA09AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
