@@ -28,13 +28,17 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
     [LocalizedCategory(nameof(Resources.Output_Category))]
     public OutArgument<string> Test { get; set; }
 
+    private bool _debugMode;
+    
     #endregion
 
 
     #region Constructors
 
-    public ScopeActivity()
+    public ScopeActivity(bool debugMode = false)
     {
+        _debugMode = debugMode;
+        if (_debugMode) return;
         Constraints.Add(ActivityConstraints.HasParentType<ScopeActivity, TestScope>(string.Format(Resources.ValidationScope_Error, Resources.TestScope_DisplayName)));
     }
 
