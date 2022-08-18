@@ -63,6 +63,10 @@ public class TestActivity : ContinuableAsyncCodeActivity
 
     #region Constructors
 
+    public TestActivity() : this(false)
+    {
+    }
+
     public TestActivity(bool debugMode)
     {
         _debugMode = debugMode;

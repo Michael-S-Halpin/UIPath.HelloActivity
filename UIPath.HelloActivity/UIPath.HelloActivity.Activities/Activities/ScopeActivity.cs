@@ -35,7 +35,11 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
 
     #region Constructors
 
-    public ScopeActivity(bool debugMode = false)
+    public ScopeActivity() : this(false)
+    {
+    }
+
+    public ScopeActivity(bool debugMode)
     {
         _debugMode = debugMode;
         if (_debugMode) return;
