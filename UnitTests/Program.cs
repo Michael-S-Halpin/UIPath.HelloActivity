@@ -18,7 +18,7 @@ internal static class Program
             { "FlagFlip", false }
         };
 
-        var obj = new TestActivity
+        var obj = new TestActivity(true)
         {
             RelativePronoun = TestEnum.This,
             DataType = typeof(string)
