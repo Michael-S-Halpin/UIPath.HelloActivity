@@ -28,7 +28,7 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
     [LocalizedCategory(nameof(Resources.Output_Category))]
     public OutArgument<string> Test { get; set; }
 
-    private bool _debugMode;
+    private readonly bool _debugMode;
     
     #endregion
 

@@ -43,7 +43,7 @@ public class TestScope : ContinuableAsyncNativeActivity
     // Object Container: Add strongly-typed objects here and they will be available in the scope's child activities.
     private readonly IObjectContainer _objectContainer;
 
-    private bool _debugMode;
+    private readonly bool _debugMode;
     
     #endregion
 

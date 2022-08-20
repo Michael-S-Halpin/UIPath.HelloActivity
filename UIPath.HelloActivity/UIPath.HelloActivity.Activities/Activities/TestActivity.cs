@@ -56,7 +56,7 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedCategory(nameof(Resources.InputOutput_Category))]
     public InOutArgument<bool> FlagFlip { get; set; }
 
-    private bool _debugMode;
+    private readonly bool _debugMode;
     
     #endregion
 
