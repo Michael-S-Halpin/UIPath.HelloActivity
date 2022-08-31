@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
+using UiPath.HelloActivity.Activities.Design.Imports;
 using UIPath.HelloActivity.Enums;
 using UiPath.Shared.Activities.Design.Controls;
 
@@ -43,5 +44,15 @@ public partial class TestActivityDesigner
         var name = typePresenter.Label.Replace( " ", "" );
         
         ModelItem.Properties[name].SetValue(typePresenter.Type);
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    {
+        var fpd = new FolderPicker();
+        fgd.InputPath = @"c:\windows\system32";
+        if (fpd.ShowDialog() == true)
+        {
+            ModelItem.Properties["FolderPath"].SetValue( new InArgument<string>( dlg.ResultPath ) );
+        }
     }
 }

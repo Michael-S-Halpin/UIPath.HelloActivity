@@ -25,11 +25,21 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
+    [LocalizedDisplayName(nameof(Resources.TestActivity_TextInput_DisplayName))]
+    [LocalizedDescription(nameof(Resources.TestActivity_TextInput_Description))]
+    [LocalizedCategory(nameof(Resources.Input_Category))]
+    public InArgument<string> TextInput { get; set; }
+
+    [LocalizedDisplayName(nameof(Resources.TestActivity_FolderPath_DisplayName))]
+    [LocalizedDescription(nameof(Resources.TestActivity_FolderPath_Description))]
+    [LocalizedCategory(nameof(Resources.Input_Category))]
+    public InArgument<string> FolderPath { get; set; }
+
     [LocalizedDisplayName(nameof(Resources.TestActivity_FilePath_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestActivity_FilePath_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
     public InArgument<string> FilePath { get; set; }
-    
+
     [LocalizedDisplayName(nameof(Resources.TestActivity_YourName_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestActivity_YourName_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]

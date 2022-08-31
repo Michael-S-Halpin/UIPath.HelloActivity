@@ -216,4 +216,16 @@
   <data name="TestActivity_FlagFlip_Description" xml:space="preserve">
     <value>A flag to flip the other direction.</value>
   </data>
+  <data name="TestActivity_FolderPath_DisplayName" xml:space="preserve">
+    <value>Folder Path</value>
+  </data>
+  <data name="TestActivity_FolderPath_Description" xml:space="preserve">
+    <value>Path to a folder.</value>
+  </data>
+  <data name="TestActivity_TextInput_DisplayName" xml:space="preserve">
+    <value>Text Input</value>
+  </data>
+  <data name="TestActivity_TextInput_Description" xml:space="preserve">
+    <value>Regular text input.</value>
+  </data>
 </root>
