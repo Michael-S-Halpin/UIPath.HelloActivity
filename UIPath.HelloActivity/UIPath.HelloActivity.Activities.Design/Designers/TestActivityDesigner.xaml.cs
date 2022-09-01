@@ -49,10 +49,10 @@ public partial class TestActivityDesigner
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
         var fpd = new FolderPicker();
-        fgd.InputPath = @"c:\windows\system32";
+        fpd.InputPath = @"c:\windows\system32";
         if (fpd.ShowDialog() == true)
         {
-            ModelItem.Properties["FolderPath"].SetValue( new InArgument<string>( dlg.ResultPath ) );
+            ModelItem.Properties["FolderPath"].SetValue( new InArgument<string>( fpd.ResultPath ) );
         }
     }
 }

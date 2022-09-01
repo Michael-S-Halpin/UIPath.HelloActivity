@@ -7,6 +7,7 @@
 		<AssemblyName>UIPath.HelloActivity.Activities.Design</AssemblyName>
     <PackageId>UIPath.HelloActivity.Activities</PackageId>
     <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageIcon>packageIcon.png</PackageIcon>
   </PropertyGroup>
   <!-- Package Metadata -->
   <PropertyGroup>
@@ -17,8 +18,6 @@
     <Copyright></Copyright>
     <PackageTags>UiPath Activit𝗒</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
-    <PackageIconUrl></PackageIconUrl>
-    <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -97,19 +96,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Activities">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Core.Presentation">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Core.Presentation.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Core.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Metadata">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Metadata.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Presentation">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Presentation.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="UiPath.Workflow">
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\UiPath\Studio\UiPath.Workflow.dll</HintPath>
+      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\UiPath.Workflow.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />

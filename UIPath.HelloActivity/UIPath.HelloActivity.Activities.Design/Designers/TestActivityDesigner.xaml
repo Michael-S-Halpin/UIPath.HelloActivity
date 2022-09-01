@@ -38,15 +38,15 @@
                     <Binding Path="ModelItem.TextInput" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
                 </sapv:ExpressionTextBox.Expression>
             </sapv:ExpressionTextBox>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_FolderPath_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_FolderPath_Description}"/>
             <Grid HorizontalAlignment="Stretch">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="22"/>
                 </Grid.ColumnDefinitions>
-                <Label Margin="0,0,0, 0"
-                       Padding="0,0,0,0"
-                       Content="{x:Static activity:Resources.TestActivity_FolderPath_DisplayName}"
-                       ToolTip="{x:Static activity:Resources.TestActivity_FolderPath_Description}"/>
                 <sapv:ExpressionTextBox Grid.Column="0" ExpressionType="{ Binding ModelItem.Properties[FolderPath].PropertyType.GenericTypeArguments[0] }" 
                                         OwnerActivity="{ Binding Path=ModelItem }" 
                                         HintText="{ x:Static activity:Resources.TestActivity_FolderPath_Description }" 
@@ -54,12 +54,12 @@
                     <sapv:ExpressionTextBox.Expression>
                         <Binding Path="ModelItem.FolderPath" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="In" UpdateSourceTrigger="PropertyChanged" />
                     </sapv:ExpressionTextBox.Expression>
-                    <Button Grid.Column="1" Margin="2,0,0,0"
-                            Padding="0,0,0,0"
-                            Content="..."
-                            HorizontalAlignment="Right"
-                            Click="ButtonBase_OnClick"/>
                 </sapv:ExpressionTextBox>
+                <Button Grid.Column="2" Margin="0,0,0,0"
+                        Padding="0,0,0,0"
+                        Content="..."
+                        HorizontalAlignment="Right"
+                        Click="ButtonBase_OnClick"/>
             </Grid>
             <Label Margin="0,0,0, 0"
                    Padding="0,0,0,0"
