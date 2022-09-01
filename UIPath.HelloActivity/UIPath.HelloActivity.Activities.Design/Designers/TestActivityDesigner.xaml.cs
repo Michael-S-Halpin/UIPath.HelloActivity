@@ -23,8 +23,6 @@ public partial class TestActivityDesigner
     public TestActivityDesigner()
     {
         InitializeComponent();
-        //TODO: Fix the mapping to FilePath in TestActivity.xaml
-        //TODO: Move Enum to the Enums folder in UiPath.HelloActivity
     }
     
     private void OptionSelection_SelectionChanged( object sender, RoutedEventArgs routedEventArgs )

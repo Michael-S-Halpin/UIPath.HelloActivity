@@ -17,4 +17,11 @@ This project contains examples of a simple activity (one with no scope required)
 • FilePathControl (A simple file selector)  
 • ComboboxControl (A combobox with manual text entry enabled)  
 • ComboBox (A list only combobox no manual entry allowed)  
-• TypePresenter (Allows selection of data types.)  
+• TypePresenter (Allows selection of data types.)
+
+# To Do
+• Adding custom icons to activities.
+• Figure out how to call a scope properly as a UnitTest so we can discontinue debug mode pattern.
+
+# Known Issues
+• Some properties do not bind properly in scoped activities contained in a scope.  The work around for this is to disable the problem ExpressionTextBox and have users set properties via the properties panel in UIPath.
