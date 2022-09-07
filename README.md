@@ -7,8 +7,10 @@ To quickly find and replace the **UIPath.HelloActivity** solution wide to make t
 
 **QuickStart.bat YourNameSpace.YourProject**
 
+Search for '**NOTE:**' in the code to find helpful comments.
+
 # The case for this project.
-When we started with UIPath .NET 6 was already the latest LTS framework available from Microsoft.  Not seeing any reason to look backwards we started on .NET 6 looking forward. I soon came to find out that most of the custom activity tools and documentation for creating custom activities in .NET are now backwards facin.  The UIPath custom activities creator tool still relies on Visual Studio 2019 and will only create .NET framework 4.6 projects.  There are guids UIPath makes available for migrating .NET framework projects to .NET 6 but that is going backwards in order to go forwards.  I could not find a simple sample project that was made for the latest .NET and also contained examples of how to use file selector controls and combobox selections.  So after several weeks of piecing together various tutorials and forum posts I decided to assemble my findings here and make it available for who ever else is looking for this information.
+When we started with UIPath .NET 6 was already the latest LTS framework available from Microsoft.  Not seeing any reason to look backwards we started on .NET 6 looking forward. I soon came to find out that most of the custom activity tools and documentation for creating custom activities in .NET are now backwards facing.  I also found out that getting official support for custom activities from UIPath extremely difficult.  The UIPath custom activities creator tool still relies on Visual Studio 2019 and will only create .NET framework 4.6 projects.  There are guides UIPath makes available for migrating .NET framework projects to .NET 6 but that is going backwards in order to go forwards.  I could not find a simple sample project that was made for the latest .NET and also contained examples of how to use file selector controls and combobox selections.  So after several weeks of piecing together various tutorials and forum posts I decided to assemble my findings here and make it available for who ever else is looking for this information.
 
 # About this project.
 This project contains examples of a simple activity (one with no scope required), a scope, and a scopeed activity.  Scoped activities are analagous to using statements in C# and are good for keeping items that require a connection to a resource open for the duration of the activities.  
@@ -20,8 +22,10 @@ This project contains examples of a simple activity (one with no scope required)
 • TypePresenter (Allows selection of data types.)
 
 # To Do
-• Adding custom icons to activities.
-• Figure out how to call a scope properly as a UnitTest so we can discontinue debug mode pattern.
+• Adding custom icons to activities.  
+• Figure out how to call a scope properly as a UnitTest so we can discontinue debug mode pattern.  
+• Move FolderPicker.cs to UiPath.Shared.Activities.Designer and test results with multiple activities.
 
 # Known Issues
-• Some properties do not bind properly in scoped activities contained in a scope.  The work around for this is to disable the problem ExpressionTextBox and have users set properties via the properties panel in UIPath.
+• Out and InOut properties have binding issues in designer xaml files preventing the user from setting the out value through the xaml component which results in a type conversion error in UIPath.  The work around for this is to set Out and InOut properties through the UIPath properties panel until a resolution can be found for this issue.  
+• Disabled AddValidationError lines in activities because they were causing inconsistent false positives on detecting validation errors.

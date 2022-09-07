@@ -4,6 +4,7 @@ using System.Linq;
 
 namespace UiPath.Shared.Activities;
 
+/* NOTE: See NOTE in IObjectContainer.cs */
 /// <summary>
 /// A simple container for objects meant to be shared across the application space.
 /// </summary>

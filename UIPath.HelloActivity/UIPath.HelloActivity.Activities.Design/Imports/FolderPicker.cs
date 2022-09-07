@@ -7,7 +7,8 @@ using System.Windows.Interop;  // for WPF support
 
 namespace UiPath.HelloActivity.Activities.Design.Imports;
 
-
+//TODO: Try moving this to Shared Activities and see if we can use it across multiple libraries without triggering
+//TODO: triggering type exists in both projects error.
 internal class FolderPicker
 {
     public virtual string ResultPath { get; protected set; }

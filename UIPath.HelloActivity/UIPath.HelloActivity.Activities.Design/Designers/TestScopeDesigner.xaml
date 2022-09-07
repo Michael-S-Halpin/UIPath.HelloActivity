@@ -3,10 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:sa="http://schemas.microsoft.com/netfx/2009/xaml/activities"
     xmlns:p="clr-namespace:UiPath.HelloActivity.Activities.Design.Properties"
-    xmlns:sharedres="clr-namespace:UiPath.Shared.Localization"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
     xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
-    xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" >
+    xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance }">
 
  
     <sap:ActivityDesigner.Resources>

@@ -7,7 +7,9 @@
                       xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
                       xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls"
-                      xmlns:activities="clr-namespace:UiPath.HelloActivity.Activities;assembly=UiPath.HelloActivity.Activities">
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
+                      d:DataContext="{d:DesignInstance }">
 
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>

@@ -11,9 +11,6 @@ using UiPath.Shared.Activities.Design.Controls;
 
 namespace UiPath.HelloActivity.Activities.Design.Designers;
 
-/// <summary>
-/// Interaction logic for TestActivityDesigner.xaml
-/// </summary>
 public partial class TestActivityDesigner
 {
     public static IEnumerable<TestEnum> ComboSelectionEnums => Enum.GetValues(typeof(TestEnum)).Cast<TestEnum>();

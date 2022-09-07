@@ -16,6 +16,8 @@ public class DesignerMetadata : IRegisterMetadata
 
         var categoryAttribute = new CategoryAttribute($"{Resources.Category}");
 
+        #region NOTE: You need to add 3 lines using the following convention for every activity that you add to the project.
+        
         builder.AddCustomAttributes(typeof(TestActivity), categoryAttribute);
         builder.AddCustomAttributes(typeof(TestActivity), new DesignerAttribute(typeof(TestActivityDesigner)));
         builder.AddCustomAttributes(typeof(TestActivity), new HelpKeywordAttribute(""));
@@ -27,7 +29,9 @@ public class DesignerMetadata : IRegisterMetadata
         builder.AddCustomAttributes(typeof(TestScope), categoryAttribute);
         builder.AddCustomAttributes(typeof(TestScope), new DesignerAttribute(typeof(TestScopeDesigner)));
         builder.AddCustomAttributes(typeof(TestScope), new HelpKeywordAttribute(""));
-        
+
+        #endregion
+
         MetadataStore.AddAttributeTable(builder.CreateTable());
     }
 }

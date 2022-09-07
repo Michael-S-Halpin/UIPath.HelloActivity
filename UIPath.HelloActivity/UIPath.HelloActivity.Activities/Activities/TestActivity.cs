@@ -90,7 +90,10 @@ public class TestActivity : ContinuableAsyncCodeActivity
 
     protected override void CacheMetadata(CodeActivityMetadata metadata)
     {
-        if (FilePath == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(FilePath)));
+        /* NOTE: This line has been known to cause intermittent false positives validation errors.
+         * I recommend doing using the [RequiredArgument] attribute on your properties to enforce required arguments in
+         * the UIPath GUI combined with strong validation in the ExecuteAsync method for more consistent results. */
+        //if (FilePath == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(FilePath)));
 
         base.CacheMetadata(metadata);
     }

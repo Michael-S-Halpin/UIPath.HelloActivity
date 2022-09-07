@@ -76,7 +76,10 @@ public class TestScope : ContinuableAsyncNativeActivity
 
     protected override void CacheMetadata(NativeActivityMetadata metadata)
     {
-        if (TestString == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(TestString)));
+        /* NOTE: This line has been known to cause intermittent false positives validation errors.
+         * I recommend doing using the [RequiredArgument] attribute on your properties to enforce required arguments in
+         * the UIPath GUI combined with strong validation in the ExecuteAsync method for more consistent results. */
+        //if (TestString == null) metadata.AddValidationError(string.Format(Resources.ValidationValue_Error, nameof(TestString)));
 
         base.CacheMetadata(metadata);
     }

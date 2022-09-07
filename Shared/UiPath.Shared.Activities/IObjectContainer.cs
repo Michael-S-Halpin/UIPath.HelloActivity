@@ -3,6 +3,15 @@ using System.Collections.Generic;
 
 namespace UiPath.Shared.Activities;
 
+/* NOTE:
+ * If you setup you solution to compile multiple scoped activity projects you may encounter
+ * 'The type 'IOBjectContain' exists in both...this...project and...that..project' error.
+ * To resolve this error you can move IObjectContainer.cs and ObjectContainer.cs our of this
+ * shared project and into each of your scoped activity projects and rename them accordingly.
+ *
+ * If someone can find out how to resolve this error and keep these classes in the shared
+ * library that would be even better.
+ */
 /// <summary>
 /// A simple container for objects meant to be shared across the application space.
 /// </summary>
