@@ -32,14 +32,18 @@ cd UIPath.HelloActivity
 rename UIPath.HelloActivity.Activities %1.Activities
 rename UIPath.HelloActivity.Activities.Design %1.Activities.Design
 cd ..
-if exist .git ( 
-  cd .git
-  del *.* /s /f /q
-  cd ..
-  rd /q /s .git )
+if exist .git goto :removegit
+goto :endif
+:removegit 
+cd .git
+del *.* /s /f /q
+cd ..
+rd /q /s .git
+:endif
 del License.txt
 del README.md
 rename UIPath.HelloActivity %1
 cd ..
 rename UIPath.HelloActivity %1
+del %1\QuickStart.bat
 @echo on
