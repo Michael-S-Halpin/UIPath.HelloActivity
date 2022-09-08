@@ -3,9 +3,18 @@ A .NET 6 implementation of custom activities for UIPath using C# 10.  This proje
 
 # Quick Start
 
-To quickly find and replace the **UIPath.HelloActivity** solution wide to make this project your own please run the following from the project folder:
+To quickly find and replace the **UIPath.HelloActivity** solution wide to make this project your own please run the following from the project folder ***while the project is not open in your IDE***:
 
 **QuickStart.bat YourNameSpace.YourProject**
+
+Or alternatively you can find and replace all 'UIPath.HelloActivity' references with YourNameSpace.YourProject including project folders.
+
+Update the references of the following files to the corresponding dlls in your UiPath installation folder:  
+• System.Activities  
+• System.Activities.Core.Presentation  
+• System.Activities.Metadata  
+• System.Activities.Presentation  
+• UiPath.Workflow
 
 Search for '**NOTE:**' in the code to find helpful comments.
 

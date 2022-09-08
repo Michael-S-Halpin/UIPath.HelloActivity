@@ -21,7 +21,7 @@ powershell -Command "(gc UIPath.HelloActivity\UIPath.HelloActivity.Activities.De
 powershell -Command "(gc UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\Properties\Resources.Designer.cs) -replace 'UIPath.HelloActivity', '%1' | Out-File -encoding ASCII UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\Properties\Resources.Designer.cs
 powershell -Command "(gc UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\Imports\FolderPicker.cs) -replace 'UIPath.HelloActivity', '%1' | Out-File -encoding ASCII UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\Imports\FolderPicker.cs
 powershell -Command "(gc UnitTests\Program.cs) -replace 'UIPath.HelloActivity', '%1' | Out-File -encoding ASCII UnitTests\Program.cs
-powershell -Command "(gc UnitTests\UnitTest.csproj) -replace 'UIPath.HelloActivity', '%1' | Out-File -encoding ASCII UnitTests\UnitTest.csproj
+powershell -Command "(gc UnitTests\UnitTests.csproj) -replace 'UIPath.HelloActivity', '%1' | Out-File -encoding ASCII UnitTests\UnitTests.csproj
 cd UIPath.HelloActivity\UIPath.HelloActivity.Activities
 rename UIPath.HelloActivity.Activities.csproj %1.Activities.csproj
 cd ..\UIPath.HelloActivity.Activities.Design
