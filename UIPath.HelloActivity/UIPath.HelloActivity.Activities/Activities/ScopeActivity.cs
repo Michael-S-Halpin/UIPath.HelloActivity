@@ -13,7 +13,7 @@ namespace UiPath.HelloActivity.Activities;
 [LocalizedDescription(nameof(Resources.ScopeActivity_Description))]
 public class ScopeActivity : ContinuableAsyncCodeActivity
 {
-    #region Properties
+    #region Properties - Everything in this section shows up in the 'Properties' panel in UiPath.
 
     /// <summary>
     /// If set, continue executing the remaining activities even if the current activity has failed.
@@ -57,21 +57,30 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
         base.CacheMetadata(metadata);
     }
 
+    // You can think of this as your Main() method for your activity.
     protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
     {
+        #region Get your input values and set them to local variables.
+
         // Object Container: Use objectContainer.Get<T>() to retrieve objects from the scope
         var objectContainer = context.GetFromContext<IObjectContainer>(TestScope.ParentContainerPropertyTag);
         
-        ///////////////////////////
-        // Add execution logic HERE
-        ///////////////////////////
+        #endregion
+        
+        #region Add execution logic HERE
+
         var hex = objectContainer.Get<string>();
         
-        // Outputs
+        #endregion
+        
+        #region Set any output values here to return to UiPath Studio.
+
         return (ctx) => 
         {
             Test.Set(ctx, hex);
         };
+        
+        #endregion
     }
 
     #endregion

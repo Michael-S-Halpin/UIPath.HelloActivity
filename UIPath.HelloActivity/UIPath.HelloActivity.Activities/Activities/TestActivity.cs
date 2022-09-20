@@ -15,7 +15,7 @@ namespace UiPath.HelloActivity.Activities;
 [LocalizedDescription(nameof(Resources.TestActivity_Description))]
 public class TestActivity : ContinuableAsyncCodeActivity
 {
-    #region Properties
+    #region Properties - Everything in this section shows up in the 'Properties' panel in UiPath.
 
     /// <summary>
     /// If set, continue executing the remaining activities even if the current activity has failed.
@@ -98,14 +98,18 @@ public class TestActivity : ContinuableAsyncCodeActivity
         base.CacheMetadata(metadata);
     }
 
+    // You can think of this as your Main() method for your activity.
     protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
     {
-        // Inputs
+        #region Get your input values and set them to local variables.
+
         var filePath = FilePath.Get(context);
         var name = YourName.Get(context);
         var flagFlip = FlagFlip.Get( context );
         var dataType = DataType.ToString();
         var relativePronoun = RelativePronoun.ToString().Replace( "theother", "the other" );
+        
+        #endregion
 
         #region Added execution logic HERE
 
@@ -117,12 +121,15 @@ public class TestActivity : ContinuableAsyncCodeActivity
         
         #endregion
 
-        // Outputs
+        #region Set any output values here to return to UiPath Studio.
+
         return (ctx) => 
         {
             Message.Set(ctx, message);
             FlagFlip.Set(ctx, flagFlip );
         };
+        
+        #endregion
     }
 
     #endregion

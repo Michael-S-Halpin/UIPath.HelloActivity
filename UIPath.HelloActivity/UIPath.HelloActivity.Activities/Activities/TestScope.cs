@@ -14,7 +14,7 @@ namespace UiPath.HelloActivity.Activities;
 [LocalizedDescription(nameof(Resources.TestScope_Description))]
 public class TestScope : ContinuableAsyncNativeActivity
 {
-    #region Properties
+    #region Properties - Everything in this section shows up in the 'Properties' panel in UiPath.
 
     [Browsable(false)]
     public ActivityAction<IObjectContainer> Body { get; set; }
@@ -84,16 +84,25 @@ public class TestScope : ContinuableAsyncNativeActivity
         base.CacheMetadata(metadata);
     }
 
+    // You can think of this as your Main() method for your scope.
     protected override async Task<Action<NativeActivityContext>> ExecuteAsync(NativeActivityContext  context, CancellationToken cancellationToken)
     {
-        // Inputs
-        var teststring = TestString.Get(context);
+        #region Get your input values and set them to local variables.
 
+        var teststring = TestString.Get(context);
         var rnd = new Random(DateTime.Now.Millisecond);
         var nbr = rnd.Next(0, int.MaxValue);
         var hex = nbr.ToString("x");
         
+        #endregion
+
+        #region Add execution logic HERE
+        
         _objectContainer.Add(hex);
+        
+        #endregion
+        
+        #region Set any output values here to return to UiPath Studio.
         
         return (ctx) => {
             // Schedule child activities
@@ -103,6 +112,8 @@ public class TestScope : ContinuableAsyncNativeActivity
             // Outputs
             OtherString.Set(ctx, teststring);
         };
+        
+        #endregion
     }
 
     #endregion
