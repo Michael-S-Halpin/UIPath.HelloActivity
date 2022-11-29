@@ -3,6 +3,7 @@ using System.Activities;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using UIPath.HelloActivity.Activities.Code;
 using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Localization;
@@ -44,6 +45,11 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.TestActivity_YourName_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
     public InArgument<string> YourName { get; set; }
+
+    [LocalizedDisplayName(nameof(Resources.TestActivity_YourName_DisplayName))]
+    [LocalizedDescription(nameof(Resources.TestActivity_YourName_Description))]
+    [LocalizedCategory(nameof(Resources.Debug_Category))]
+    public InArgument<string> LogFile { get; set; }
 
     [LocalizedDisplayName(nameof(Resources.TestActivity_RelativePronoun_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestActivity_RelativePronoun_Description))]
@@ -105,14 +111,22 @@ public class TestActivity : ContinuableAsyncCodeActivity
 
         var filePath = FilePath.Get(context);
         var name = YourName.Get(context);
-        var flagFlip = FlagFlip.Get( context );
+        var flagFlip = FlagFlip.Get(context);
         var dataType = DataType.ToString();
         var relativePronoun = RelativePronoun.ToString().Replace( "theother", "the other" );
+        var logFile = LogFile.Get(context);
+        Logger logger = null;
+
+        if (!string.IsNullOrEmpty(logFile))
+        {
+            logger = new Logger(logFile);
+        }
         
         #endregion
 
         #region Added execution logic HERE
 
+        logger?.Write("Made it.");
         var exists = File.Exists(filePath) ? "exists." : "does not exist!";
 
         var message = $"Hello {name}!\nI see {relativePronoun.ToLower()} file {exists}\nYou selected type '{dataType}'";

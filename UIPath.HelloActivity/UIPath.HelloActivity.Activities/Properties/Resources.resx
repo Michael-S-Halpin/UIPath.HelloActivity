@@ -168,6 +168,9 @@
   <data name="Input_Category" xml:space="preserve">
     <value>Input</value>
   </data>
+  <data name="Debug_Category" xml:space="preserve">
+    <value>Debug</value>
+  </data>
   <data name="TestScope_DisplayName" xml:space="preserve">
     <value>Test Scope</value>
   </data>

@@ -87,6 +87,15 @@ namespace UiPath.HelloActivity.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Debug.
+        /// </summary>
+        public static string Debug_Category {
+            get {
+                return ResourceManager.GetString("Debug_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do.
         /// </summary>
         public static string Do {

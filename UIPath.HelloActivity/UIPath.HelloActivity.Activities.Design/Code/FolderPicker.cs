@@ -5,7 +5,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Windows; // for WPF support
 using System.Windows.Interop;  // for WPF support
 
-namespace UiPath.HelloActivity.Activities.Design.Imports;
+namespace UiPath.HelloActivity.Activities.Design.Code;
 
 //TODO: Try moving this to Shared Activities and see if we can use it across multiple libraries without triggering
 //TODO: triggering type exists in both projects error.
