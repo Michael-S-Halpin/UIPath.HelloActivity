@@ -116,6 +116,30 @@
                                        Mode=TwoWay, 
                                        Converter={StaticResource 
                                        ResourceKey=ModelItemConverter}}"/>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_Message_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_Message_Description}"/>
+            <sapv:ExpressionTextBox ExpressionType="{ Binding ModelItem.Properties[Message].PropertyType.GenericTypeArguments[0] }" 
+                                    OwnerActivity="{ Binding Path=ModelItem }" 
+                                    HintText="{ x:Static activity:Resources.TestActivity_Message_Description }" 
+                                    UseLocationExpression="True"> <!-- NOTE: OutArguments will not work with out this being set to true! -->
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.Message" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="Out" UpdateSourceTrigger="PropertyChanged" /> <!-- ConverterParameter needs to be set to 'Out' for OutArguments. -->
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
+            <Label Margin="0,0,0, 0"
+                   Padding="0,0,0,0"
+                   Content="{x:Static activity:Resources.TestActivity_FlagFlip_DisplayName}"
+                   ToolTip="{x:Static activity:Resources.TestActivity_FlagFlip_Description}"/>
+            <sapv:ExpressionTextBox ExpressionType="{ Binding ModelItem.Properties[FlagFlip].PropertyType.GenericTypeArguments[0] }" 
+                                    OwnerActivity="{ Binding Path=ModelItem }" 
+                                    HintText="{ x:Static activity:Resources.TestActivity_FlagFlip_Description }" 
+                                    UseLocationExpression="True"> <!-- NOTE: InOutArguments will not work with out this being set to true! -->
+                <sapv:ExpressionTextBox.Expression>
+                    <Binding Path="ModelItem.FlagFlip" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="InOut" UpdateSourceTrigger="PropertyChanged" /> <!-- ConverterParameter needs to be set to 'InOut' for InOutArguments. -->
+                </sapv:ExpressionTextBox.Expression>
+            </sapv:ExpressionTextBox>
         </StackPanel>
     </uip:ActivityDecoratorControl>
 </sap:ActivityDesigner>

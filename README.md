@@ -38,5 +38,12 @@ This project contains examples of a simple activity (one with no scope required)
 *(Currently there is a debugMode variable in each activity and scope. This is used to avoid lines that only need to be executed when running from UiPath Studio and also to execute other lines that would only apply to making sure objects are set for your devleopment environment. Ideally we want to be able to instantiate a scope from code in UnitTest so that we can execute every line of code all the time. I currently do not have time to figure out how to do this. If someone can take this up and figure it out that would be great. Otherwise using this debugMode pattern is how I unit test my activities before importing them into UiPath Studio.)*
 
 # Known Issues
-• Out and InOut properties have binding issues in designer xaml files preventing the user from setting the out value through the xaml component which results in a type conversion error in UIPath.  The current work around for this is to set Out and InOut properties through the UIPath properties panel and to not include them in your xaml layout until a resolution can be found for this issue.  
-• Disabled AddValidationError lines in activities because they were causing inconsistent false positives on detecting validation errors.
+• ~~Out and InOut properties have binding issues in designer xaml files preventing the user from setting the out value through the xaml component which results in a type conversion error in UIPath.~~ 
+
+I was able to get an answer for this from UiPath and this is now fixed!
+
+• Disabled AddValidationError lines in activities because they were causing inconsistent false positives on detecting validation errors.  
+
+• IObjectContainer is known to cause conflicts when using multiple scoped activities within a single project.  A work around I am testing is to remove it from shared activities and move it into the activity code an rename the class to something more specific to that activity so that it does not cause object conflicts.  
+
+• Cannot use check boxes in the activity with 2 way binding causing boxes to not be checked appropriately when the project loads. I have a question out to UiPath inquiring about how we can solve this. 
