@@ -183,10 +183,10 @@
   <data name="TestScope_TestString_Description" xml:space="preserve">
     <value>A simple string.</value>
   </data>
-  <data name="ScopeActivity_Test_DisplayName" xml:space="preserve">
-    <value>Test</value>
+  <data name="ScopeActivity_ScopeId_DisplayName" xml:space="preserve">
+    <value>Scope Id</value>
   </data>
-  <data name="ScopeActivity_Test_Description" xml:space="preserve">
+  <data name="ScopeActivity_ScopeId_Description" xml:space="preserve">
     <value>Represent an object passed in by the outer scope.</value>
   </data>
   <data name="Output_Category" xml:space="preserve">

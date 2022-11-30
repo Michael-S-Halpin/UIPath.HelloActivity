@@ -152,18 +152,18 @@ namespace UiPath.HelloActivity.Activities.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Represent an object passed in by the outer scope..
         /// </summary>
-        public static string ScopeActivity_Test_Description {
+        public static string ScopeActivity_ScopeId_Description {
             get {
-                return ResourceManager.GetString("ScopeActivity_Test_Description", resourceCulture);
+                return ResourceManager.GetString("ScopeActivity_ScopeId_Description", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Test.
+        ///   Looks up a localized string similar to Scope Id.
         /// </summary>
-        public static string ScopeActivity_Test_DisplayName {
+        public static string ScopeActivity_ScopeId_DisplayName {
             get {
-                return ResourceManager.GetString("ScopeActivity_Test_DisplayName", resourceCulture);
+                return ResourceManager.GetString("ScopeActivity_ScopeId_DisplayName", resourceCulture);
             }
         }
         

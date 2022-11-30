@@ -6,19 +6,20 @@
     xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
     xmlns:p="clr-namespace:UiPath.HelloActivity.Activities.Design.Properties"
     xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
     xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
     xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
     d:DataContext="{d:DesignInstance }">
-
- 
+    
     <sap:ActivityDesigner.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="..\Themes\Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
         </ResourceDictionary>
     </sap:ActivityDesigner.Resources>
  

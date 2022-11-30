@@ -107,13 +107,8 @@ public class TestActivity : ContinuableAsyncCodeActivity
     // You can think of this as your Main() method for your activity.
     protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
     {
-        #region Get your input values and set them to local variables.
+        #region Optional Logging
 
-        var filePath = FilePath.Get(context);
-        var name = YourName.Get(context);
-        var flagFlip = FlagFlip.Get(context);
-        var dataType = DataType.ToString();
-        var relativePronoun = RelativePronoun.ToString().Replace( "theother", "the other" );
         var logFile = LogFile.Get(context);
         Logger logger = null;
 
@@ -121,22 +116,49 @@ public class TestActivity : ContinuableAsyncCodeActivity
         {
             logger = new Logger(logFile);
         }
+
+        #endregion
         
+        #region Get your input values and set them to local variables.
+
+        var textInput = TextInput.Get(context);
+        var filePath = FilePath.Get(context);
+        var folderPath = FolderPath.Get(context);
+        var name = YourName.Get(context);
+        var flagFlip = FlagFlip.Get(context);
+        var dataType = DataType.ToString();
+        var relativePronoun = RelativePronoun.ToString().Replace( "theother", "the other" );
+        
+        #endregion
+        
+        #region Validations
+
+        logger?.Write("Validating...");
+        if (string.IsNullOrEmpty(textInput)) throw new NullReferenceException("The property 'Text Input' cannot be null or empty.");
+        if (string.IsNullOrEmpty(filePath)) throw new FileNotFoundException("You did not select a file.");
+        if (string.IsNullOrEmpty(folderPath)) throw new FileNotFoundException("You did not select a file.");
+        if (string.IsNullOrEmpty(name)) throw new NullReferenceException("The property 'Name' cannot be null or empty.");
+        logger?.WriteLine("...completed!");
+
         #endregion
 
         #region Added execution logic HERE
 
-        logger?.Write("Made it.");
+        logger?.WriteLine("Made it to execution logic.");
         var exists = File.Exists(filePath) ? "exists." : "does not exist!";
 
-        var message = $"Hello {name}!\nI see {relativePronoun.ToLower()} file {exists}\nYou selected type '{dataType}'";
+        logger?.WriteLine("Compiling return message.");
+        var message = $"Hello {name}!\nI see {relativePronoun.ToLower()} file you selected {exists}.\nYour text input was '{textInput}'.\nYou selected {folderPath}.\nYou selected type '{dataType}'";
 
+        logger?.Write("Flag flipping...");
         flagFlip = ! flagFlip;
+        logger?.WriteLine("...done.");
         
         #endregion
 
         #region Set any output values here to return to UiPath Studio.
 
+        logger?.Write("Returning to UiPath.");
         return (ctx) => 
         {
             Message.Set(ctx, message);

@@ -99,6 +99,7 @@ public class TestScope : ContinuableAsyncNativeActivity
         #region Add execution logic HERE
         
         _objectContainer.Add(hex);
+        var otherString = teststring + "\nHex Id: " + hex;
         
         #endregion
         
@@ -110,7 +111,7 @@ public class TestScope : ContinuableAsyncNativeActivity
 				ctx.ScheduleAction(Body, _objectContainer, OnCompleted, OnFaulted);
 
             // Outputs
-            OtherString.Set(ctx, teststring);
+            OtherString.Set(ctx, otherString);
         };
         
         #endregion

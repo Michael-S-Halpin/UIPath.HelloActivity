@@ -3,6 +3,7 @@
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:activity="clr-namespace:UiPath.HelloActivity.Activities.Properties;assembly=UiPath.HelloActivity.Activities"
                       xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+                      xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
                       xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
                       xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
                       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -15,6 +16,7 @@
                 <ResourceDictionary Source="..\Themes\Generic.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
         </ResourceDictionary>
     </sap:ActivityDesigner.Resources>
 
@@ -25,11 +27,11 @@
     <StackPanel>
         <Label Margin="0,0,0, 0"
                Padding="0,0,0,0"
-               Content="{x:Static activity:Resources.ScopeActivity_Test_DisplayName}"
-               ToolTip="{x:Static activity:Resources.ScopeActivity_Test_Description}"/>
+               Content="{x:Static activity:Resources.ScopeActivity_ScopeId_DisplayName}"
+               ToolTip="{x:Static activity:Resources.ScopeActivity_ScopeId_Description}"/>
         <sapv:ExpressionTextBox ExpressionType="{ Binding ModelItem.Properties[Test].PropertyType.GenericTypeArguments[0] }" 
                                 OwnerActivity="{ Binding Path=ModelItem }" 
-                                HintText="{ x:Static activity:Resources.ScopeActivity_Test_Description }" 
+                                HintText="{ x:Static activity:Resources.ScopeActivity_ScopeId_Description }" 
                                 UseLocationExpression="True"> <!-- NOTE: OutArguments will not work with out this being set to true! -->
             <sapv:ExpressionTextBox.Expression>
                 <Binding Path="ModelItem.Test" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="Out" UpdateSourceTrigger="PropertyChanged" /> <!-- ConverterParameter needs to be set to 'Out' for OutArguments. -->

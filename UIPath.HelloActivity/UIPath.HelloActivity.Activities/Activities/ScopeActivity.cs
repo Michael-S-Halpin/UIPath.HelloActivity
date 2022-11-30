@@ -23,10 +23,10 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
-    [LocalizedDisplayName(nameof(Resources.ScopeActivity_Test_DisplayName))]
-    [LocalizedDescription(nameof(Resources.ScopeActivity_Test_Description))]
+    [LocalizedDisplayName(nameof(Resources.ScopeActivity_ScopeId_DisplayName))]
+    [LocalizedDescription(nameof(Resources.ScopeActivity_ScopeId_Description))]
     [LocalizedCategory(nameof(Resources.Output_Category))]
-    public OutArgument<string> Test { get; set; }
+    public OutArgument<string> ScopeId { get; set; }
 
     private readonly bool _debugMode;
     
@@ -77,7 +77,7 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
 
         return (ctx) => 
         {
-            Test.Set(ctx, hex);
+            ScopeId.Set(ctx, hex);
         };
         
         #endregion
