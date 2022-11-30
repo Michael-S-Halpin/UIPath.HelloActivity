@@ -29,12 +29,12 @@
                Padding="0,0,0,0"
                Content="{x:Static activity:Resources.ScopeActivity_ScopeId_DisplayName}"
                ToolTip="{x:Static activity:Resources.ScopeActivity_ScopeId_Description}"/>
-        <sapv:ExpressionTextBox ExpressionType="{ Binding ModelItem.Properties[Test].PropertyType.GenericTypeArguments[0] }" 
+        <sapv:ExpressionTextBox ExpressionType="{ Binding ModelItem.Properties[ScopeId].PropertyType.GenericTypeArguments[0] }" 
                                 OwnerActivity="{ Binding Path=ModelItem }" 
                                 HintText="{ x:Static activity:Resources.ScopeActivity_ScopeId_Description }" 
                                 UseLocationExpression="True"> <!-- NOTE: OutArguments will not work with out this being set to true! -->
             <sapv:ExpressionTextBox.Expression>
-                <Binding Path="ModelItem.Test" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="Out" UpdateSourceTrigger="PropertyChanged" /> <!-- ConverterParameter needs to be set to 'Out' for OutArguments. -->
+                <Binding Path="ModelItem.ScopeId" Converter="{ StaticResource ArgumentToExpressionConverter }" Mode="TwoWay" ConverterParameter="Out" UpdateSourceTrigger="PropertyChanged" /> <!-- ConverterParameter needs to be set to 'Out' for OutArguments. -->
             </sapv:ExpressionTextBox.Expression>
         </sapv:ExpressionTextBox>
     </StackPanel>
