@@ -17,13 +17,13 @@
 		  <HintPath>..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Activities">
-		  <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.dll</HintPath>
+		  <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.dll</HintPath>
 		</Reference>
 		<Reference Include="System.Activities.Presentation" Condition="'$(TargetFramework)' == 'net461'">
 		  <HintPath>..\..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Presentation.dll</HintPath>
 		</Reference>
 		<Reference Include="UiPath.Workflow">
-		  <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\UiPath.Workflow.dll</HintPath>
+		  <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\UiPath.Workflow.dll</HintPath>
 		</Reference>
   </ItemGroup>
   <ItemGroup>

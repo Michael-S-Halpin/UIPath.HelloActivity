@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ActivitiesConstraints.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\ArgumentSettingAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Code\Logger.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Contracts\BaseChildActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)InArgumentExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Localization\Localization.cs" />

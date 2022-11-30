@@ -96,19 +96,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Activities">
-      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Core.Presentation">
-      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Core.Presentation.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Core.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Metadata">
-      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Metadata.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Metadata.dll</HintPath>
     </Reference>
     <Reference Include="System.Activities.Presentation">
-      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\System.Activities.Presentation.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\System.Activities.Presentation.dll</HintPath>
     </Reference>
     <Reference Include="UiPath.Workflow">
-      <HintPath>..\..\..\..\AppData\Local\Programs\UiPath\Studio\UiPath.Workflow.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\Program Files\UiPath\Studio\UiPath.Workflow.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />

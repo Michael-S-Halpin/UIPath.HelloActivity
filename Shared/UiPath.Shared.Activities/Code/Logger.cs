@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace UIPath.HelloActivity.Activities.Code;
+namespace UiPath.Shared.Activities.Code;
 
 /// <summary>
 /// Writes log entries to log file.
@@ -28,6 +28,15 @@ public class Logger
     /// </summary>
     /// <param name="message">The message to log.</param>
     public void Write(string message)
+    {
+        File.AppendAllText(_file, message);   
+    }
+    
+    /// <summary>
+    /// Writes the specified message to the log file as a line.
+    /// </summary>
+    /// <param name="message">The message to log.</param>
+    public void WriteLine(string message)
     {
         File.AppendAllText(_file, message + "\r\n");   
     }
