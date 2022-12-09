@@ -4,8 +4,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Activities.Statements;
 using System.ComponentModel;
+using UIPath.HelloActivity.Activities.Code;
 using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
+using UiPath.Shared.Activities.Code;
 using UiPath.Shared.Activities.Localization;
 
 namespace UiPath.HelloActivity.Activities;
@@ -27,6 +29,11 @@ public class TestScope : ContinuableAsyncNativeActivity
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
+    [LocalizedCategory(nameof(Resources.Common_Category))]
+    [LocalizedDisplayName(nameof(Resources.DebugLog_DisplayName))]
+    [LocalizedDescription(nameof(Resources.DebugLog_Description))]
+    public InArgument<string> DebugLog { get; set; }
+
     [LocalizedDisplayName(nameof(Resources.TestScope_TestString_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestScope_TestString_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
@@ -43,6 +50,7 @@ public class TestScope : ContinuableAsyncNativeActivity
     // Object Container: Add strongly-typed objects here and they will be available in the scope's child activities.
     private readonly IObjectContainer _objectContainer;
 
+    private Logger _log;
     private readonly bool _debugMode;
     
     #endregion
@@ -87,6 +95,16 @@ public class TestScope : ContinuableAsyncNativeActivity
     // You can think of this as your Main() method for your scope.
     protected override async Task<Action<NativeActivityContext>> ExecuteAsync(NativeActivityContext  context, CancellationToken cancellationToken)
     {
+        #region Optional Logging
+
+        var debugLog = DebugLog.Get(context);
+        if (!string.IsNullOrEmpty(debugLog))
+        {
+            _log = new Logger(debugLog);
+        }
+
+        #endregion
+        
         #region Get your input values and set them to local variables.
 
         var teststring = TestString.Get(context);

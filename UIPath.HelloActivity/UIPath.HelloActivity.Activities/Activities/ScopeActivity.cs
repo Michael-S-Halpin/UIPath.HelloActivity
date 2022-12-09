@@ -2,8 +2,10 @@
 using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
+using UIPath.HelloActivity.Activities.Code;
 using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
+using UiPath.Shared.Activities.Code;
 using UiPath.Shared.Activities.Localization;
 using UiPath.Shared.Activities.Utilities;
 
@@ -23,11 +25,17 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
+    [LocalizedCategory(nameof(Resources.Common_Category))]
+    [LocalizedDisplayName(nameof(Resources.DebugLog_DisplayName))]
+    [LocalizedDescription(nameof(Resources.DebugLog_Description))]
+    public InArgument<string> DebugLog { get; set; }
+
     [LocalizedDisplayName(nameof(Resources.ScopeActivity_ScopeId_DisplayName))]
     [LocalizedDescription(nameof(Resources.ScopeActivity_ScopeId_Description))]
     [LocalizedCategory(nameof(Resources.Output_Category))]
     public OutArgument<string> ScopeId { get; set; }
 
+    private Logger _log;
     private readonly bool _debugMode;
     
     #endregion
@@ -60,6 +68,16 @@ public class ScopeActivity : ContinuableAsyncCodeActivity
     // You can think of this as your Main() method for your activity.
     protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
     {
+        #region Optional Logging
+
+        var debugLog = DebugLog.Get(context);
+        if (!string.IsNullOrEmpty(debugLog))
+        {
+            _log = new Logger(debugLog);
+        }
+
+        #endregion
+
         #region Get your input values and set them to local variables.
 
         // Object Container: Use objectContainer.Get<T>() to retrieve objects from the scope

@@ -26,6 +26,11 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
+    [LocalizedCategory(nameof(Resources.Common_Category))]
+    [LocalizedDisplayName(nameof(Resources.DebugLog_DisplayName))]
+    [LocalizedDescription(nameof(Resources.DebugLog_Description))]
+    public InArgument<string> DebugLog { get; set; }
+
     [LocalizedDisplayName(nameof(Resources.TestActivity_TextInput_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestActivity_TextInput_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
@@ -45,12 +50,7 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedDescription(nameof(Resources.TestActivity_YourName_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
     public InArgument<string> YourName { get; set; }
-
-    [LocalizedDisplayName(nameof(Resources.TestActivity_YourName_DisplayName))]
-    [LocalizedDescription(nameof(Resources.TestActivity_YourName_Description))]
-    [LocalizedCategory(nameof(Resources.Debug_Category))]
-    public InArgument<string> LogFile { get; set; }
-
+    
     [LocalizedDisplayName(nameof(Resources.TestActivity_RelativePronoun_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestActivity_RelativePronoun_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
@@ -72,6 +72,7 @@ public class TestActivity : ContinuableAsyncCodeActivity
     [LocalizedCategory(nameof(Resources.InputOutput_Category))]
     public InOutArgument<bool> FlagFlip { get; set; }
 
+    private Logger _log;
     private readonly bool _debugMode;
     
     #endregion
@@ -109,12 +110,10 @@ public class TestActivity : ContinuableAsyncCodeActivity
     {
         #region Optional Logging
 
-        var logFile = LogFile.Get(context);
-        Logger logger = null;
-
-        if (!string.IsNullOrEmpty(logFile))
+        var debugLog = DebugLog.Get(context);
+        if (!string.IsNullOrEmpty(debugLog))
         {
-            logger = new Logger(logFile);
+            _log = new Logger(debugLog);
         }
 
         #endregion
@@ -133,32 +132,32 @@ public class TestActivity : ContinuableAsyncCodeActivity
         
         #region Validations
 
-        logger?.Write("Validating...");
+        _log?.Write("Validating...");
         if (string.IsNullOrEmpty(textInput)) throw new NullReferenceException("The property 'Text Input' cannot be null or empty.");
         if (string.IsNullOrEmpty(filePath)) throw new FileNotFoundException("You did not select a file.");
         if (string.IsNullOrEmpty(folderPath)) throw new FileNotFoundException("You did not select a file.");
         if (string.IsNullOrEmpty(name)) throw new NullReferenceException("The property 'Name' cannot be null or empty.");
-        logger?.WriteLine("...completed!");
+        _log?.WriteLine("...completed!");
 
         #endregion
 
         #region Added execution logic HERE
 
-        logger?.WriteLine("Made it to execution logic.");
+        _log?.WriteLine("Made it to execution logic.");
         var exists = File.Exists(filePath) ? "exists." : "does not exist!";
 
-        logger?.WriteLine("Compiling return message.");
+        _log?.WriteLine("Compiling return message.");
         var message = $"Hello {name}!\nI see {relativePronoun.ToLower()} file you selected {exists}.\nYour text input was '{textInput}'.\nYou selected {folderPath}.\nYou selected type '{dataType}'";
 
-        logger?.Write("Flag flipping...");
+        _log?.Write("Flag flipping...");
         flagFlip = ! flagFlip;
-        logger?.WriteLine("...done.");
+        _log?.WriteLine("...done.");
         
         #endregion
 
         #region Set any output values here to return to UiPath Studio.
 
-        logger?.Write("Returning to UiPath.");
+        _log?.Write("Returning to UiPath.");
         return (ctx) => 
         {
             Message.Set(ctx, message);

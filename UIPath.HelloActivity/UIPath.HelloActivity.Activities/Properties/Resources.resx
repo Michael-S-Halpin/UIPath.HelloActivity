@@ -231,4 +231,16 @@
   <data name="TestActivity_TextInput_Description" xml:space="preserve">
     <value>Regular text input.</value>
   </data>
+  <data name="TestActivity_LogFile_DisplayName" xml:space="preserve">
+    <value>Log File</value>
+  </data>
+  <data name="TestActivity_LogFile_Description" xml:space="preserve">
+    <value>If a file path is specified debug logs will be written to the specified file.</value>
+  </data>
+  <data name="DebugLog_DisplayName" xml:space="preserve">
+    <value>Debug Log</value>
+  </data>
+  <data name="DebugLog_Description" xml:space="preserve">
+    <value>If specified a debug log will be produced in the specified file.</value>
+  </data>
 </root>

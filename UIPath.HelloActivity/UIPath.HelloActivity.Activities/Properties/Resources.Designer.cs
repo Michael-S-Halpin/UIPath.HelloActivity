@@ -96,6 +96,24 @@ namespace UiPath.HelloActivity.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to If specified a debug log will be produced in the specified file..
+        /// </summary>
+        public static string DebugLog_Description {
+            get {
+                return ResourceManager.GetString("DebugLog_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug Log.
+        /// </summary>
+        public static string DebugLog_DisplayName {
+            get {
+                return ResourceManager.GetString("DebugLog_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do.
         /// </summary>
         public static string Do {
@@ -254,6 +272,24 @@ namespace UiPath.HelloActivity.Activities.Properties {
         public static string TestActivity_FolderPath_DisplayName {
             get {
                 return ResourceManager.GetString("TestActivity_FolderPath_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to If a file path is specified debug logs will be written to the specified file..
+        /// </summary>
+        public static string TestActivity_LogFile_Description {
+            get {
+                return ResourceManager.GetString("TestActivity_LogFile_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log File.
+        /// </summary>
+        public static string TestActivity_LogFile_DisplayName {
+            get {
+                return ResourceManager.GetString("TestActivity_LogFile_DisplayName", resourceCulture);
             }
         }
         
