@@ -1,14 +1,12 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 using System.Windows; // for WPF support
 using System.Windows.Interop;  // for WPF support
 
-namespace UiPath.HelloActivity.Activities.Design.Code;
+namespace UiPath.Shared.Activities.Design.Controls;
 
-//TODO: Try moving this to Shared Activities and see if we can use it across multiple libraries without triggering
-//TODO: triggering type exists in both projects error.
 internal class FolderPicker
 {
     public virtual string ResultPath { get; protected set; }

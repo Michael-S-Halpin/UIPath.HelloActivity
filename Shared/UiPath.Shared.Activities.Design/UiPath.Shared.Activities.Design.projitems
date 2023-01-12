@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\ActivityDecoratorControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FolderPicker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ActivityIconConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\ArrayToStringConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\StringArgumentToComboboxConverter.cs" />
