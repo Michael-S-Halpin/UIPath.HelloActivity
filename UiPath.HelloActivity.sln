@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UIPath.HelloActivity", "UIPath.HelloActivity", "{348379CF-9646-44FB-B76F-5C8EA0D1D38B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UiPath.HelloActivity", "UiPath.HelloActivity", "{348379CF-9646-44FB-B76F-5C8EA0D1D38B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities", "UIPath.HelloActivity\UIPath.HelloActivity.Activities\UIPath.HelloActivity.Activities.csproj", "{340FCE66-C510-46A6-9999-213687131A29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPath.HelloActivity.Activities", "UiPath.HelloActivity\UiPath.HelloActivity.Activities\UiPath.HelloActivity.Activities.csproj", "{340FCE66-C510-46A6-9999-213687131A29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPath.HelloActivity.Activities.Design", "UIPath.HelloActivity\UIPath.HelloActivity.Activities.Design\UIPath.HelloActivity.Activities.Design.csproj", "{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UiPath.HelloActivity.Activities.Design", "UiPath.HelloActivity\UiPath.HelloActivity.Activities.Design\UiPath.HelloActivity.Activities.Design.csproj", "{1B9BFC34-6B60-45D4-BF38-0D220A176FE2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{8B5B812F-E2B8-451B-B6D1-0B96BFDB319F}"
 EndProject

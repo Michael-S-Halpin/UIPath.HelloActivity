@@ -3,9 +3,9 @@
     <UseWPF>true</UseWPF>
     <EnableDefaultPageItems>false</EnableDefaultPageItems>
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
-		<RootNamespace>UIPath.HelloActivity.Activities.Design</RootNamespace>
-		<AssemblyName>UIPath.HelloActivity.Activities.Design</AssemblyName>
-    <PackageId>UIPath.HelloActivity.Activities</PackageId>
+		<RootNamespace>UiPath.HelloActivity.Activities.Design</RootNamespace>
+		<AssemblyName>UiPath.HelloActivity.Activities.Design</AssemblyName>
+    <PackageId>UiPath.HelloActivity.Activities</PackageId>
     <PackageLicenseUrl></PackageLicenseUrl>
     <PackageIcon>packageIcon.png</PackageIcon>
   </PropertyGroup>
@@ -55,7 +55,7 @@
   </Target>
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\UIPath.HelloActivity.Activities.Design.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\UiPath.HelloActivity.Activities.Design.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Page Include="..\..\Shared\Themes\Generic.xaml">
@@ -76,7 +76,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UIPath.HelloActivity.Activities\UIPath.HelloActivity.Activities.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\UiPath.HelloActivity.Activities\UiPath.HelloActivity.Activities.csproj" PrivateAssets="All" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">

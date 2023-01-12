@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace UIPath.HelloActivity.Activities.Design.Designers;
+namespace UiPath.HelloActivity.Activities.Design.Designers;
 
 /// <summary>
 /// Interaction logic for TestActivityDesigner.xaml

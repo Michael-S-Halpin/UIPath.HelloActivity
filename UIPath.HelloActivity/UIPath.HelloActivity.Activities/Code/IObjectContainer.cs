@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace UIPath.HelloActivity.Activities.Code;
+namespace UiPath.HelloActivity.Activities.Code;
 
 /* NOTE:
  * If you setup you solution to compile multiple scoped activity projects you may encounter

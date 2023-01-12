@@ -7,7 +7,7 @@ using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Code;
 using UiPath.Shared.Activities.Localization;
-using UIPath.HelloActivity.Enums;
+using UiPath.HelloActivity.Enums;
 
 namespace UiPath.HelloActivity.Activities;
 

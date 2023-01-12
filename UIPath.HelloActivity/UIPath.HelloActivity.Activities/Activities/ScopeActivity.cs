@@ -2,7 +2,7 @@
 using System.Activities;
 using System.Threading;
 using System.Threading.Tasks;
-using UIPath.HelloActivity.Activities.Code;
+using UiPath.HelloActivity.Activities.Code;
 using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Code;

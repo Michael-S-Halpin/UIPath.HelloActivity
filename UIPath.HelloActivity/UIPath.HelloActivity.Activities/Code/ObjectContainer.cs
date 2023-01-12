@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace UIPath.HelloActivity.Activities.Code;
+namespace UiPath.HelloActivity.Activities.Code;
 
 /* NOTE: See NOTE in IObjectContainer.cs */
 /// <summary>

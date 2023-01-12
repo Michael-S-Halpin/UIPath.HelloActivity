@@ -1,6 +1,6 @@
 ﻿using System.Activities;
 using UiPath.HelloActivity.Activities;
-using UIPath.HelloActivity.Enums;
+using UiPath.HelloActivity.Enums;
 
 namespace UnitTest;
 

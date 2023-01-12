@@ -6,7 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using UiPath.HelloActivity.Activities.Design.Code;
-using UIPath.HelloActivity.Enums;
+using UiPath.HelloActivity.Enums;
 using UiPath.Shared.Activities.Design.Controls;
 
 namespace UiPath.HelloActivity.Activities.Design.Designers;

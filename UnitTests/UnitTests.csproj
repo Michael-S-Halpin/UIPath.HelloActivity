@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\UIPath.HelloActivity\UIPath.HelloActivity.Activities\UIPath.HelloActivity.Activities.csproj" />
+      <ProjectReference Include="..\UiPath.HelloActivity\UiPath.HelloActivity.Activities\UiPath.HelloActivity.Activities.csproj" />
     </ItemGroup>
 
 </Project>

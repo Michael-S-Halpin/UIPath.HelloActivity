@@ -2,7 +2,7 @@ using System.Activities.Presentation.Metadata;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using UiPath.HelloActivity.Activities.Design.Designers;
-using UIPath.HelloActivity.Activities.Design.Designers;
+using UiPath.HelloActivity.Activities.Design.Designers;
 using UiPath.HelloActivity.Activities.Design.Properties;
 
 namespace UiPath.HelloActivity.Activities.Design;

@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
-		<RootNamespace>UIPath.HelloActivity.Activities</RootNamespace>
-		<AssemblyName>UIPath.HelloActivity.Activities</AssemblyName>
-    <PackageId>UIPath.HelloActivity.Activities.Implementation</PackageId>
+		<RootNamespace>UiPath.HelloActivity.Activities</RootNamespace>
+		<AssemblyName>UiPath.HelloActivity.Activities</AssemblyName>
+    <PackageId>UiPath.HelloActivity.Activities.Implementation</PackageId>
   </PropertyGroup>
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
-    <DocumentationFile>bin\$(Configuration)\UIPath.HelloActivity.Activities.xml</DocumentationFile>
+    <DocumentationFile>bin\$(Configuration)\UiPath.HelloActivity.Activities.xml</DocumentationFile>
   </PropertyGroup>
 	<ItemGroup>
 		<Reference Include="Microsoft.CodeAnalysis.VisualBasic.Scripting" Condition="'$(TargetFramework)' == 'net461'">

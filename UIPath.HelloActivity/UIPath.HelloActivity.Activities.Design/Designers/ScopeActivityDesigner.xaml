@@ -1,4 +1,4 @@
-﻿<sap:ActivityDesigner x:Class="UIPath.HelloActivity.Activities.Design.Designers.ScopeActivityDesigner"
+﻿<sap:ActivityDesigner x:Class="UiPath.HelloActivity.Activities.Design.Designers.ScopeActivityDesigner"
                       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                       xmlns:activity="clr-namespace:UiPath.HelloActivity.Activities.Properties;assembly=UiPath.HelloActivity.Activities"
@@ -21,7 +21,7 @@
     </sap:ActivityDesigner.Resources>
 
     <sap:ActivityDesigner.Icon>
-        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/UIPath.HelloActivity.Activities.Design;component/themes/icons.xaml}" />
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/UiPath.HelloActivity.Activities.Design;component/themes/icons.xaml}" />
     </sap:ActivityDesigner.Icon>
 
     <StackPanel>

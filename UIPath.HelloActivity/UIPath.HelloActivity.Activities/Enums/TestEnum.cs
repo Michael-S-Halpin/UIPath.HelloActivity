@@ -1,4 +1,4 @@
-﻿namespace UIPath.HelloActivity.Enums;
+﻿namespace UiPath.HelloActivity.Enums;
 
 public enum TestEnum
 {
