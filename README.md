@@ -51,4 +51,4 @@ I was able to get an answer for this from UiPath and this is now fixed!
 
 • IObjectContainer is known to cause conflicts when using multiple scoped activities within a single project.  A work around I am testing is to remove it from shared activities and move it into the activity code an rename the class to something more specific to that activity so that it does not cause object conflicts.  
 
-• Cannot use check boxes in the activity with 2 way binding causing boxes to not be checked appropriately when the project loads. I have a question out to UiPath inquiring about how we can solve this. 
+• Cannot use check boxes in the activity with 2 way binding causing boxes to not be checked appropriately when the project loads. I have a question out to UiPath inquiring about how we can solve this.
