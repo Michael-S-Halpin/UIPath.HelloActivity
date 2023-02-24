@@ -2,7 +2,9 @@
 using UiPath.HelloActivity.Activities;
 using UiPath.HelloActivity.Enums;
 
-namespace UnitTest;
+// ReSharper disable UnusedVariable
+
+namespace UnitTests;
 
 internal static class Program
 {
@@ -24,7 +26,7 @@ internal static class Program
         };
 
         // Everything else like enums and types get set here and pass directly into the activity
-        // and do not need to be retrieved via the .Get(CancellaitonToken) like argument values.
+        // and do not need to be retrieved via the .Get(CancellationToken) like argument values.
         var obj = new TestActivity(true)
         {
             RelativePronoun = TestEnum.This,

@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+      <NoWarn>1591;1998</NoWarn>
     <TargetFrameworks>net6.0-windows</TargetFrameworks>
 		<RootNamespace>UiPath.HelloActivity.Activities</RootNamespace>
 		<AssemblyName>UiPath.HelloActivity.Activities</AssemblyName>

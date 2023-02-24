@@ -1,4 +1,6 @@
-﻿namespace UiPath.HelloActivity.Enums;
+﻿// ReSharper disable CheckNamespace
+
+namespace UiPath.HelloActivity.Enums;
 
 public enum TestEnum
 {

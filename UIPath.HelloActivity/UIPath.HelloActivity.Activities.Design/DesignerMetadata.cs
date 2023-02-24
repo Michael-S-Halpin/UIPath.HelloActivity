@@ -2,13 +2,18 @@ using System.Activities.Presentation.Metadata;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using UiPath.HelloActivity.Activities.Design.Designers;
-using UiPath.HelloActivity.Activities.Design.Designers;
 using UiPath.HelloActivity.Activities.Design.Properties;
 
 namespace UiPath.HelloActivity.Activities.Design;
 
+/// <summary>
+/// Adds the activities contained in this package to the list of activities in UiPath.
+/// </summary>
 public class DesignerMetadata : IRegisterMetadata
 {
+    /// <summary>
+    /// Registers this package of activities in UiPath.
+    /// </summary>
     public void Register()
     {
         var builder = new AttributeTableBuilder();

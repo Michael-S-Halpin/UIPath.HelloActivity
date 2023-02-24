@@ -10,12 +10,18 @@ using UiPath.Shared.Activities.Design.Controls;
 
 namespace UiPath.HelloActivity.Activities.Design.Designers;
 
+/// <summary>
+/// Interaction logic for TestActivityDesigner.xaml
+/// </summary>
 public partial class TestActivityDesigner
 {
-    public static IEnumerable<TestEnum> ComboSelectionEnums => Enum.GetValues(typeof(TestEnum)).Cast<TestEnum>();
+    internal static IEnumerable<TestEnum> ComboSelectionEnums => Enum.GetValues(typeof(TestEnum)).Cast<TestEnum>();
 
-    public static IEnumerable<string> OptionSelections => new List<string>( new[] { "Michael", "Joel", "Stephanie", "Samantha" } );
+    internal static IEnumerable<string> OptionSelections => new List<string>( new[] { "Michael", "Joel", "Stephanie", "Samantha" } );
 
+    /// <summary>
+    /// Default constructor for TestActivityDesigner.
+    /// </summary>
     public TestActivityDesigner()
     {
         InitializeComponent();
@@ -42,8 +48,11 @@ public partial class TestActivityDesigner
 
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
     {
-        var fpd = new FolderPicker();
-        fpd.InputPath = @"c:\windows\system32";
+        var fpd = new FolderPicker
+        {
+            InputPath = @"c:\windows\system32"
+        };
+        
         if (fpd.ShowDialog() == true)
         {
             ModelItem.Properties["FolderPath"].SetValue( new InArgument<string>( fpd.ResultPath ) );

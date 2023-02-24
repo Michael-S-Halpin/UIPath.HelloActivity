@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+// ReSharper disable ClassWithVirtualMembersNeverInherited.Global
+
 namespace UiPath.HelloActivity.Activities.Code;
 
 /* NOTE: See NOTE in IObjectContainer.cs */

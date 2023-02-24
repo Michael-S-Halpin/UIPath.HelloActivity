@@ -9,6 +9,9 @@ using UiPath.HelloActivity.Activities.Properties;
 using UiPath.Shared.Activities;
 using UiPath.Shared.Activities.Code;
 using UiPath.Shared.Activities.Localization;
+// ReSharper disable CheckNamespace
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+// ReSharper disable MemberCanBePrivate.Global
 
 namespace UiPath.HelloActivity.Activities;
 
@@ -22,23 +25,33 @@ public class TestScope : ContinuableAsyncNativeActivity
     public ActivityAction<IObjectContainer> Body { get; set; }
 
     /// <summary>
-    /// If set, continue executing the remaining activities even if the current activity has failed.
+    /// ***OPTIONAL*** If set, continue executing the remaining activities even if the current activity has failed.
     /// </summary>
     [LocalizedCategory(nameof(Resources.Common_Category))]
     [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
     [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
     public override InArgument<bool> ContinueOnError { get; set; }
 
-    [LocalizedCategory(nameof(Resources.Common_Category))]
+    /// <summary>
+    /// ***OPTIONAL*** A sample string out argument named ScopeId.
+    /// </summary>
+    [LocalizedCategory(nameof(Resources.Debug_Category))]
     [LocalizedDisplayName(nameof(Resources.DebugLog_DisplayName))]
     [LocalizedDescription(nameof(Resources.DebugLog_Description))]
     public InArgument<string> DebugLog { get; set; }
 
+    /// <summary>
+    /// ***REQUIRED*** A sample string in argument named TestString.
+    /// </summary>
+    [RequiredArgument]
     [LocalizedDisplayName(nameof(Resources.TestScope_TestString_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestScope_TestString_Description))]
     [LocalizedCategory(nameof(Resources.Input_Category))]
     public InArgument<string> TestString { get; set; }
 
+    /// <summary>
+    /// ***OPTIONAL*** A sample string out argument named OtherString.
+    /// </summary>
     [LocalizedDisplayName(nameof(Resources.TestScope_OtherString_DisplayName))]
     [LocalizedDescription(nameof(Resources.TestScope_OtherString_Description))]
     [LocalizedCategory(nameof(Resources.Output_Category))]
@@ -50,7 +63,9 @@ public class TestScope : ContinuableAsyncNativeActivity
     // Object Container: Add strongly-typed objects here and they will be available in the scope's child activities.
     private readonly IObjectContainer _objectContainer;
 
+    // ReSharper disable once NotAccessedField.Local
     private Logger _log;
+    // ReSharper disable once PrivateFieldCanBeConvertedToLocalVariable
     private readonly bool _debugMode;
     
     #endregion
@@ -58,6 +73,11 @@ public class TestScope : ContinuableAsyncNativeActivity
 
     #region Constructors
 
+    /// <summary>
+    /// If debug mode is set to true the activity may use some alternate logic to fill in gaps missing from UiPath/// in order to function correctly.
+    /// </summary>
+    /// <param name="objectContainer">Passed in from UiPath from the activity scope.</param>
+    /// <param name="debugMode">If true debug logic is applied.</param>    
     public TestScope(IObjectContainer objectContainer, bool debugMode = false)
     {
         _debugMode = debugMode;
@@ -72,6 +92,9 @@ public class TestScope : ContinuableAsyncNativeActivity
         };
     }
 
+    /// <summary>
+    /// Default constructor instantiates a new instance of this class.
+    /// </summary>
     public TestScope() : this(new ObjectContainer())
     {
 
@@ -82,6 +105,11 @@ public class TestScope : ContinuableAsyncNativeActivity
 
     #region Protected Methods
 
+    // ReSharper disable once RedundantOverriddenMember
+    /// <summary>
+    /// Implementing this method is required by UiPath.
+    /// </summary>
+    /// <param name="metadata">MetaData is provided by UiPath</param>
     protected override void CacheMetadata(NativeActivityMetadata metadata)
     {
         /* NOTE: This line has been known to cause intermittent false positives validation errors.
@@ -92,7 +120,12 @@ public class TestScope : ContinuableAsyncNativeActivity
         base.CacheMetadata(metadata);
     }
 
-    // You can think of this as your Main() method for your scope.
+    /// <summary>
+    /// This method executes the core body of logic.  Similar to the Main() method of a console application.
+    /// </summary>
+    /// <param name="context">The run context coming from UiPath.</param>
+    /// <param name="cancellationToken">The cancellation indicator coming from UiPath</param>
+    /// <returns></returns>
     protected override async Task<Action<NativeActivityContext>> ExecuteAsync(NativeActivityContext  context, CancellationToken cancellationToken)
     {
         #region Optional Logging
@@ -107,7 +140,7 @@ public class TestScope : ContinuableAsyncNativeActivity
         
         #region Get your input values and set them to local variables.
 
-        var teststring = TestString.Get(context);
+        var testString = TestString.Get(context);
         var rnd = new Random(DateTime.Now.Millisecond);
         var nbr = rnd.Next(0, int.MaxValue);
         var hex = nbr.ToString("x");
@@ -117,7 +150,7 @@ public class TestScope : ContinuableAsyncNativeActivity
         #region Add execution logic HERE
         
         _objectContainer.Add(hex);
-        var otherString = teststring + "\nHex Id: " + hex;
+        var otherString = testString + "\nHex Id: " + hex;
         
         #endregion
         
@@ -161,8 +194,8 @@ public class TestScope : ContinuableAsyncNativeActivity
         var disposableObjects = _objectContainer.Where(o => o is IDisposable);
         foreach (var obj in disposableObjects)
         {
-            if (obj is IDisposable dispObject)
-                dispObject.Dispose();
+            if (obj is IDisposable disposableObject)
+                disposableObject.Dispose();
         }
         _objectContainer.Clear();
     }
