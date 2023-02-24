@@ -18,7 +18,10 @@ Update the references of the following files to the corresponding dlls in your U
 
 Search for '**NOTE:**' in the code to find helpful comments.
 
-![Training Video](https://i3.ytimg.com/vi/E0fPKq8TNo0/maxresdefault.jpg)(https://youtu.be/E0fPKq8TNo0)
+# How To Video
+![Training Video](https://i3.ytimg.com/vi/E0fPKq8TNo0/maxresdefault.jpg)
+[Click here to watch the training video.](https://youtu.be/E0fPKq8TNo0)
+[Alternative HQ video download click here.](https://drive.google.com/file/d/1QWAcAR70ETybhzB2b-CmfcxWjoiNxEWF/view?usp=sharing)
 
 # The case for this project.
 When we started with UiPath .NET 6 was already the latest LTS framework available from Microsoft.  Not seeing any reason to look backwards we started on .NET 6 looking forward. I soon came to find out that most of the custom activity tools and documentation for creating custom activities in .NET are now backwards facing.  I also found out that getting official support for custom activities from UiPath extremely difficult.  The UiPath custom activities creator tool still relies on Visual Studio 2019 and will only create .NET framework 4.6 projects.  There are guides UiPath makes available for migrating .NET framework projects to .NET 6 but that is going backwards in order to go forwards.  I could not find a simple sample project that was made for the latest .NET and also contained examples of how to use file selector controls and combobox selections.  So after several weeks of piecing together various tutorials and forum posts I decided to assemble my findings here and make it available for who ever else is looking for this information.
