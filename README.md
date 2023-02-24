@@ -20,7 +20,7 @@ Search for '**NOTE:**' in the code to find helpful comments.
 
 # How To Video
 ![Training Video](https://i3.ytimg.com/vi/E0fPKq8TNo0/maxresdefault.jpg)
-[Click here to watch the training video.](https://youtu.be/E0fPKq8TNo0)
+[Click here to watch the training video.](https://youtu.be/E0fPKq8TNo0) \
 [Alternative HQ video download click here.](https://drive.google.com/file/d/1QWAcAR70ETybhzB2b-CmfcxWjoiNxEWF/view?usp=sharing)
 
 # The case for this project.
