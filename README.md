@@ -43,11 +43,11 @@ Or
 ```ps
 C:\Program Files\UiPath\Studio
 ```
-For the **Activities** project you need to import:
+For the **Activities** project you need to import:\
 • System.Activities  
 • UiPath.Workflow
 
-For the **Activities.Design** project you need to import:
+For the **Activities.Design** project you need to import:\
 • System.Activities  
 • System.Activities.Core.Presentation  
 • System.Activities.Metadata  
